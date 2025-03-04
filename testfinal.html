@@ -5,105 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <style>
-        .jumbotron1 {
-            background-image: url('https://www.flixprime.cc/assets/images/banner1.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 100px 0;
-            display: block;
-            position: relative;
-            height: 400px;
-        }
+    <STYle>
+    .jumbotron1 {
+        background-image: url('https://www.flixprime.cc/assets/images/banner1.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        display: block;
+        position: relative;
+        height: 400px;
+    }
 
-        .container {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            text-align: left;
-        }
+    .container {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        text-align: left;
+    }
 
-        .container h1 {
-            color: white;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+    .container h1 {
+        color: white;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
 
-        .links {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
+    .links {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
 
-        .links a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-        }
+    .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+    }
 
-        .links a:hover {
-            text-decoration: underline;
-        }
+    .links a:hover {
+        text-decoration: underline;
+    }
 
-        .contactar {
-            margin-left: 200;
-        }
+    .contactar {
+        margin-left: 200;
+    }
 
-        .left-text {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
+    .left-text {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
 
-        .left-text span.flix {
-            color: orange;
-        }
+    .left-text span.flix {
+        color: orange;
+    }
 
-        .left-text span.prime {
-            color: white;
-        }
+    .left-text span.prime {
+        color: white;
+    }
 
-        .dropdown {
-            display: inline-block;
-        }
+    .dropdown {
+        display: inline-block;
+    }
 
-        .dropdown-menu {
-            background-color: rgba(0, 0, 0, 0.7);
-            border: none;
-        }
+    .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.7);
+        border: none;
+    }
 
-        .dropdown-item {
-            color: white;
-        }
+    .dropdown-item {
+        color: white;
+    }
 
-        .dropdown-item:hover {
-            background-color: #007bff;
-            color: white;
-        }
+    .dropdown-item:hover {
+        background-color: #007bff;
+        color: white;
+    }
 
-        /* Flexbox pour aligner les div "soporte" et "activation" */
-        .content-container {
-            display: flex;
-            justify-content: space-between; /* Séparer l'image et le contenu */
-            background-color: rgba(0, 0, 0, 0.7); /* Fond sombre */
-            padding: 40px;
-            margin-top: 30px;
-            border-radius: 10px;
-        }
+    /* Flexbox pour aligner les div "soporte" et "activation" */
+    .content-container {
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Séparer texte et image */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    margin-top: 30px;
+    border-radius: 10px;
+   }    
+   .text-content {
+    flex: 2; /* Plus d'espace pour le texte */
+    margin-right: 20px;
+  }
 
-        /* Div contenant le texte */
-        .text-content {
-            flex: 1; /* Prend tout l'espace restant */
-            margin-right: 20px; /* Espace entre le texte et l'image */
-        }
+    .image {
+    flex: 1; /* L'image prend moins de place */
+    text-align: right;
+    }
+
+   .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+   }
+
+   /* Section logos directement en dessous */
+    .logos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    text-align: center;
+}
+
+    .logos-header {
+    background-color: rgba(255, 255, 255, 0.2); /* Fond léger pour voir où il est */
+    padding: 20px;
+    border-radius: 10px;
+    }   
+
+
+
+
+    /* Div contenant le texte */
+    .text-content {
+     flex: 1; /* Prend tout l'espace restant */
+     margin-right: 20px; /* Espace entre le texte et l'image */
+    }
 
         .titre h1, .titre p {
             color: white;
@@ -140,6 +177,7 @@
             display: block;
             border-radius: 10px; /* Arrondir les bords de l'image */
         }
+   
         #scrollToTopBtn {
       display: none; /* Caché par défaut */
       position: fixed;
@@ -202,19 +240,19 @@
         <div class="text-content">
             <div class="titre">
                 <p>Por qué elegirnos</p>
-                <h1>Obtén todas las series, </h1>
-                <h1>películas, y canales en </h1>
+                <h1>Obtén todas las series,</h1>
+                <h1>películas, y canales en</h1>
                 <h1>vivo en un solo lugar</h1>
                 <p>No es necesario suscribirte a múltiples plataformas; Flix Prime ofrece la consolidación de contenido de diversas plataformas, canales premium, televisión en vivo y deportes, todo en un único lugar y a un precio imbatible.</p>
             </div>
-
+    
             <div class="features">
                 <!-- Div Soporte -->
                 <div class="soporte">
                     <h1>Soporte 24/7</h1>
                     <p>Contamos con atención personalizada permanentemente.</p>
                 </div>
-
+    
                 <!-- Div Activation -->
                 <div class="activation">
                     <h1>Activación en 5 minutos</h1>
@@ -222,26 +260,37 @@
                 </div>
             </div>
         </div>
-
+    
         <div class="image">
             <img src="https://www.flixprime.cc/assets/images/ab.jpg" alt="Imagen de Flix Prime">
         </div>
     </div>
-       <div class="dispositivosection"></div> 
-        <div class="dispositivo">
-        <p>Desde cualquier</p>
-        <h1>Dispositivo</h1>
-        <div class="row">
-            <div></div>
-        </div>
 
+    <div style="text-align: center; color: rgb(29, 46, 199); margin-top: 20px;;">
+        <h1>Desde cualquier</h1>
+        <p>Dispositivo.</p>
+    
+    <div class="logos ">
+       
+        <div class="smart">
+            <h1> SMART TV</h1>
+            <p>Disponible en todos los Smart TV de cualquier marca.</p>
+        </div>
+    
+        <div class="Smartphone">
+            <h1>Smartphone</h1>
+            <p>Smartphone o Tablet con sistema Android o iOS</p>
+        </div>
+    
+        <div class="pc-laptop">
+            <h1>PC / Laptop</h1>
+            <p>Puedes usarlo desde tu laptop o PC de escritorio</p>
+        </div>
+    </div>
     </div>
     
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-    <div style="background-color:black;color:white;padding:30px">Scroll Down</div>
-    <div style="background-color:lightgrey;padding:30px 30px 2500px">This example demonstrates how to create a "scroll to top" button that becomes visible 
-    <strong>when the user starts to scroll the page</strong>.</div>
+    
+     
 
 <script>
     /*bouton pour scroller*/
