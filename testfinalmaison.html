@@ -4,8 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* Overlay sombre pour les images du carrousel */
+      .carousel-item {
+        position: relative;
+      }
+      .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fond sombre semi-transparent */
+        z-index: 1; /* Overlay au-dessus de l'image */
+      }
+
+      /* Style pour le texte FLIX PRIME */
+      .left-text {
+        position: absolute;
+        top: 20px;
+        left: 150px;
+        z-index: 1000; /* Texte au-dessus de l'overlay */
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .flix {
+        color: orangered;
+      }
+      .prime {
+        color: blue;
+      }
+      
+      /* Conteneur des liens */
+      .links {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        z-index: 1000; /* Assurez-vous que les liens sont au-dessus du carrousel */
+      }
+
+      /* Styles de base pour les liens */
+      .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: color 0.3s ease; /* Animation fluide pour le changement de couleur */
+      }
+
+      /* Changement de couleur au survol */
+      .links a:hover {
+        color: orangered; /* Changement de couleur au survol */
+      }
+
+      /* Style spécifique pour "Contactar Ventas" */
+      .links a.contactar {
+        color: ora; /* Couleur de base */
+      }
+
+      .links a.contactar:hover {
+        color: orangered; /* Changement de couleur au survol */
+      }
+
+      /* Style pour le bouton du dropdown */
+      .dropdown-toggle {
+        color: white !important; /* Couleur du texte */
+        background-color: transparent !important; /* Fond transparent */
+        border: none !important; /* Pas de bordure */
+        font-size: 1rem;
+        font-weight: bold;
+        transition: color 0.3s ease; /* Animation fluide */
+      }
+
+      .dropdown-toggle:hover {
+        color: orangered !important; /* Changement de couleur au survol */
+      }
+      .dropdown-menu {
+      background-color: #333; /* Fond sombre */
+      }
+    </style>
 </head>
 <body>
-    
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel" style="position: relative;">
+      <div class="left-text">
+        <span class="flix">FLIX</span> <span class="prime">PRIME</span>
+      </div>
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+      </div>
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.flixprime.cc/assets/images/banner1.jpg" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.ludicweb.fr/wp-content/uploads/2023/07/Sorties-Cinema-Juillet-2023.jpg" alt="Chicago" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://whyy.org/wp-content/uploads/2023/08/Lionel-Messi-768x511.jpg" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.gannett-cdn.com/presto/2020/12/09/PAPP/0fc3bd25-b47d-4dac-aad0-d5250e83929e-D5B_Unit_18044RC.jpg?crop=4481,2521,x9,y0&width=3200&height=1801&format=pjpg&auto=webp" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.cineserie.com/wp-content/uploads/2016/08/398969.jpg" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://articles-img.sftcdn.net/t_articles/auto-mapping-folder/sites/3/2023/01/Highly-anticipated-sci-fi-movies-released-in-2023-5.jpg" style="width:100%">
+        </div>
+      </div>
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Liens cliquables -->
+    <div class="links">
+        <a href="#" style="color: orangered;">Home</a>
+        <a href="#">Acerca</a>
+        <a href="#">Contenido</a>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Elige Tu País
+            </button>
+            <ul class="dropdown-menu ">
+                <li><a class="dropdown-item" href="#">Perú</a></li>
+                <li><a class="dropdown-item" href="#">Argentina</a></li>
+                <li><a class="dropdown-item" href="#">Chile</a></li>
+                <li><a class="dropdown-item" href="#">Colombia</a></li>
+                <li><a class="dropdown-item" href="#">Costa Rica</a></li>
+                <li><a class="dropdown-item" href="#">Ecuador</a></li>
+                <li><a class="dropdown-item" href="#">México</a></li>
+                <li><a class="dropdown-item" href="#">Panamá</a></li>
+                <li><a class="dropdown-item" href="#">Paraguay</a></li>
+                <li><a class="dropdown-item" href="#">Uruguay</a></li>
+                <li><a class="dropdown-item" href="#">Venezuela</a></li>
+            </ul>
+        </div>
+        <a href="#" class="contactar " style="color:orangered">Contactar Ventas</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
