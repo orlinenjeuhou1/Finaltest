@@ -9,29 +9,38 @@
 <style>
 /*style pour mon jumbotrom*/
     .jumbotron1 {
-      background-image: url('https://www.flixprime.cc/assets/images/banner1.jpg');
-     background-size: cover;
-     background-position: center;
-     padding: 100px 0; /* Ajusté pour plus d'espace */
-     text-align: ;
-/* display: none; */ /* Supprimer cette ligne */
-    position: relative; /* Permet de positionner le formulaire de recherche de manière absolue */
+  background-image: url('https://www.flixprime.cc/assets/images/banner1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0; /* Ajusté pour plus d'espace */
+  text-align: center;
+  display: block; /* Afficher l'élément */
+  position: relative; /* Nécessaire pour positionner le texte en absolu */
+  height: 400px; /* Définir une hauteur pour le jumbotron (ajustez selon vos besoins) */
 }
+
+.container {
+  position: absolute; /* Position absolue par rapport au jumbotron */
+  bottom: 20px; /* Distance par rapport au bas */
+  left: 20px; /* Distance par rapport à la gauche */
+  text-align: left; /* Aligner le texte à gauche */
+}
+.container h1 {
+  color: white; /* Texte en blanc */
+  font-size: 2.5rem; /* Taille du texte */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
+}
+
 </style>
 </head>
 <body>
      <!-- Section jumbotron et boutons -->
-    <div class="jumbotron1  w-100 mx-0 mt-3">
+      <div class="jumbotron1 w-100 mx-0 mt-3">
         <div class="container">
-          <h1>las majores series actuales</h1>
+          <h1>Las mayores series actuales</h1>
         </div>
       </div>
-        
-        <!-- Liens "Contact" et "Home" -->
-            <div class="jumbotron-links">
-              <a href="#contact-section" class="btn btn-outline-light">Contactar vertas</a>
-              <a href="#" class="btn btn-outline-light">Home</a>
-            </div>
+    
         
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
