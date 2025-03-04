@@ -140,6 +140,27 @@
             display: block;
             border-radius: 10px; /* Arrondir les bords de l'image */
         }
+        #scrollToTopBtn {
+      display: none; /* Caché par défaut */
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      line-height: 40px;
+      text-align: center;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: darkred;
+    }
     </style>
 </head>
 <body>
@@ -206,7 +227,48 @@
             <img src="https://www.flixprime.cc/assets/images/ab.jpg" alt="Imagen de Flix Prime">
         </div>
     </div>
+       <div class="dispositivosection"></div> 
+        <div class="dispositivo">
+        <p>Desde cualquier</p>
+        <h1>Dispositivo</h1>
+        <div class="row">
+            <div></div>
+        </div>
 
+    </div>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <div style="background-color:black;color:white;padding:30px">Scroll Down</div>
+    <div style="background-color:lightgrey;padding:30px 30px 2500px">This example demonstrates how to create a "scroll to top" button that becomes visible 
+    <strong>when the user starts to scroll the page</strong>.</div>
+
+<script>
+    /*bouton pour scroller*/
+    const ButtonTopscrollTo = document.createElement('button');
+    ButtonTopscrollTo.id = 'scrollToTopBtn';
+    ButtonTopscrollTo.innerHTML = '↑'; // Vous pouvez utiliser une icône ou un texte
+
+    // Ajouter le bouton au DOM
+    document.body.appendChild(ButtonTopscrollTo);
+
+    // Gérer l'événement de clic
+    ButtonTopscrollTo.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Gérer la visibilité du bouton
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) { // Afficher le bouton après avoir scrollé 200px
+        ButtonTopscrollTo.style.display = 'block';
+      } else {
+        ButtonTopscrollTo.style.display = 'none';
+      }
+    });
+</script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
