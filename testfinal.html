@@ -13,7 +13,7 @@
             padding: 100px 0;
             display: block;
             position: relative;
-            height: 400px; /* Ajustez la hauteur selon vos besoins */
+            height: 400px;
         }
 
         .container {
@@ -29,7 +29,6 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        /* Barre de navigation positionnée en haut */
         .links {
             position: absolute;
             top: 20px;
@@ -37,7 +36,7 @@
             transform: translateX(-50%);
             display: flex;
             gap: 20px;
-            align-items: center; /* Alignement vertical */
+            align-items: center;
         }
 
         .links a {
@@ -51,13 +50,10 @@
             text-decoration: underline;
         }
 
-        /* Déplace "Contactar Ventas" plus à droite */
         .contactar {
             margin-left: 200;
-           
         }
 
-        /* Ajouter du texte avant "Home" */
         .left-text {
             position: absolute;
             top: 20px;
@@ -67,7 +63,6 @@
             font-weight: bold;
         }
 
-        /* Ajouter une couleur orange pour "FLIX" et blanc pour "PRIME" */
         .left-text span.flix {
             color: orange;
         }
@@ -76,42 +71,56 @@
             color: white;
         }
 
-        /* Ajustement du dropdown */
         .dropdown {
-            display: inline-block; /* Permet de l'aligner avec "Contenido" */
+            display: inline-block;
         }
 
-        /* Ajout de fond sombre pour les éléments du dropdown */
         .dropdown-menu {
-            background-color: rgba(0, 0, 0, 0.7); /* Fond sombre transparent */
-            border: none; /* Enlève la bordure par défaut */
+            background-color: rgba(0, 0, 0, 0.7);
+            border: none;
         }
 
-        /* Style des éléments dans la liste déroulante */
         .dropdown-item {
-            color: white; /* Texte en blanc */
+            color: white;
         }
 
         .dropdown-item:hover {
-            background-color: #007bff; /* Couleur au survol */
-            color: white; /* Assurer que le texte reste visible */
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Flexbox pour aligner les div "soporte" et "activation" */
+        .features {
+        display: flex;
+        justify-content: space-between;
+        margin: 0; /* Enlever toute marge */
+        padding: 0; /* Enlever tout padding */
+        gap: 0; /* S'assurer qu'il n'y a pas d'écart entre les éléments */
+        }
+
+       .features div {
+        flex: 1;
+        margin: 0; /* Enlever les marges extérieures */
+        padding: 0; /* Enlever tout padding interne */
+        text-align: center;
+        }
+
+
+
+        .features h1 {
+            margin-bottom: 0;
         }
     </style>
 </head>
 <body>
-    <!-- Section jumbotron et liens -->
     <div class="jumbotron1 w-100 mx-0 mt-3">
-        <!-- Texte ajouté à gauche avant Home -->
         <div class="left-text">
             <span class="flix">FLIX</span> <span class="prime">PRIME</span>
         </div>
-
-        <!-- Barre de navigation -->
         <div class="links">
             <a href="#" style="color: orange;">Home</a>
             <a href="#">Acerca</a>
             <a href="#">Contenido</a>
-            <!-- Liste déroulante juste après "Contenido" -->
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                     Elige tu país
@@ -137,27 +146,33 @@
             <h1>Las mayores series actuales</h1>
         </div>
     </div>
-    <div>
+
+    <div class="titre">
         <p>Por qué elegirnos</p>
-         <h1>Obtén todas las series, </h1>
-         <h1>películas, y canales en </h1>
-         <h1>vivo en un solo lugar</h1>
-        <p>No es necesario suscribirte a múltiples plataformas;Flix Prime
-        <p>ofrece la consolidación de contenido de diversas plataformas,</p>
-        <p>canales premium, televisión en vivo y deportes, todo en un único</p>
-        <p> lugar y a un precio imbatible.</p>
+        <h1>Obtén todas las series, </h1>
+        <h1>películas, y canales en </h1>
+        <h1>vivo en un solo lugar</h1>
+        <p>No es necesario suscribirte a múltiples plataformas; Flix Prime ofrece la consolidación de contenido de diversas plataformas, canales premium, televisión en vivo y deportes, todo en un único lugar y a un precio imbatible.</p>
     </div>
-    <div class="soporte">
-        <h1>Soporte 24/7</h1>
-        <p></p>Contamos con atención personalizada permamentente.</p> 
+    <div class="features">
+        <!-- Div Soporte -->
+        <div class="soporte">
+            <h1>Soporte 24/7</h1>
+            <p>Contamos con atención personalizada permanentemente.</p>
+        </div>
+
+        <!-- Div Activation -->
+        <div class="activation">
+            <h1>Activación en 5 minutos</h1>
+            <p>Solo se requiere una conexión a Internet de mínimo 30mb.</p>
+        </div>
     </div>
-    <div class="Activation">
-        <h1>Activación en 5 minutos</h1> 
-        <p>Solo se requiere una conexión a Internet de mínimo 30mb .</p> 
+    <div class="image">
+        <img src="https://www.flixprime.cc/assets/images/ab.jpg" alt="">
     </div>
 
-    <!-- Scripts Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
