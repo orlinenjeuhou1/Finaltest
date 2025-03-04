@@ -49,6 +49,16 @@
         gap: 20px;
         align-items: center;
         z-index: 1000; /* Assurez-vous que les liens sont au-dessus du carrousel */
+        width: 100%; /* Assurez-vous que le conteneur prend toute la largeur */
+        padding: 0 20px; /* Ajoute un peu de padding pour éviter que le texte touche les bords */
+      }
+
+      /* Groupe pour les éléments centrés */
+      .centered-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin: 0 auto; /* Centre ce groupe */
       }
 
       /* Styles de base pour les liens */
@@ -67,11 +77,17 @@
 
       /* Style spécifique pour "Contactar Ventas" */
       .links a.contactar {
-        color: ora; /* Couleur de base */
+        color: orange; /* Couleur de base */
+        padding: 10px 20px; /* Espacement intérieur */
+        border: 2px solid orange; /* Bordure orange */
+        border-radius: 5px; /* Coins arrondis */
+        background-color: rgba(255, 165, 0, 0.1); /* Fond semi-transparent */
       }
 
       .links a.contactar:hover {
-        color: orangered; /* Changement de couleur au survol */
+        color: white; /* Changement de couleur au survol */
+        background-color: orangered; /* Fond orangé au survol */
+        border-color: orangered; /* Bordure orangée au survol */
       }
 
       /* Style pour le bouton du dropdown */
@@ -87,8 +103,20 @@
       .dropdown-toggle:hover {
         color: orangered !important; /* Changement de couleur au survol */
       }
+
+      /* Personnalisation du menu déroulant */
       .dropdown-menu {
-      background-color: #333; /* Fond sombre */
+        background-color: #333; /* Fond sombre */
+        border: none; /* Supprimer la bordure */
+      }
+
+      .dropdown-item {
+        color: white !important; /* Texte blanc */
+      }
+
+      .dropdown-item:hover {
+        background-color: orangered !important; /* Fond orangé au survol */
+        color: white !important; /* Texte blanc au survol */
       }
     </style>
 </head>
@@ -139,31 +167,38 @@
 
     <!-- Liens cliquables -->
     <div class="links">
-        <a href="#" style="color: orangered;">Home</a>
-        <a href="#">Acerca</a>
-        <a href="#">Contenido</a>
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                Elige Tu País
-            </button>
-            <ul class="dropdown-menu ">
-                <li><a class="dropdown-item" href="#">Perú</a></li>
-                <li><a class="dropdown-item" href="#">Argentina</a></li>
-                <li><a class="dropdown-item" href="#">Chile</a></li>
-                <li><a class="dropdown-item" href="#">Colombia</a></li>
-                <li><a class="dropdown-item" href="#">Costa Rica</a></li>
-                <li><a class="dropdown-item" href="#">Ecuador</a></li>
-                <li><a class="dropdown-item" href="#">México</a></li>
-                <li><a class="dropdown-item" href="#">Panamá</a></li>
-                <li><a class="dropdown-item" href="#">Paraguay</a></li>
-                <li><a class="dropdown-item" href="#">Uruguay</a></li>
-                <li><a class="dropdown-item" href="#">Venezuela</a></li>
-            </ul>
+        <!-- Groupe pour les éléments centrés -->
+        <div class="centered-links">
+            <a href="#" style="color: orangered;">Home</a>
+            <a href="#">Acerca</a>
+            <a href="#">Contenido</a>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Elige Tu País
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Perú</a></li>
+                    <li><a class="dropdown-item" href="#">Argentina</a></li>
+                    <li><a class="dropdown-item" href="#">Chile</a></li>
+                    <li><a class="dropdown-item" href="#">Colombia</a></li>
+                    <li><a class="dropdown-item" href="#">Costa Rica</a></li>
+                    <li><a class="dropdown-item" href="#">Ecuador</a></li>
+                    <li><a class="dropdown-item" href="#">México</a></li>
+                    <li><a class="dropdown-item" href="#">Panamá</a></li>
+                    <li><a class="dropdown-item" href="#">Paraguay</a></li>
+                    <li><a class="dropdown-item" href="#">Uruguay</a></li>
+                    <li><a class="dropdown-item" href="#">Venezuela</a></li>
+                </ul>
+            </div>
         </div>
-        <a href="#" class="contactar " style="color:orangered">Contactar Ventas</a>
+                <!-- Conteneur pour "Contactar Ventas" -->
+            <div class="contactar-container">
+                <a href="#" class="contactar">Contactar Ventas</a>
+            </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
 </html>
